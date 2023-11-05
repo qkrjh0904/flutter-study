@@ -18,36 +18,48 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      color: Colors.yellow,
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                color: Colors.red,
-                child: Text('Container1'),
-              ),
-              Container(
-                color: Colors.green,
-                child: Text('Container1'),
-              ),
-              Container(
-                color: Colors.blue,
-                child: Text('Container1'),
-              ),
-            ],
-          ),
-          Container(
-            width: double.infinity,
-            color: Colors.red,
-            child: Text('Container1'),
-          ),
-        ],
-      ),
-    );
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          color: Colors.grey,
+          width: 200,
+          height: 200,
+          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        ),
+        Container(
+          color: Colors.grey,
+          width: 200,
+          height: 200,
+          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        ),
+        Container(
+          color: Colors.grey,
+          width: 200,
+          height: 200,
+          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        ),
+        Container(
+          color: Colors.grey,
+          width: 200,
+          height: 200,
+          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        ),
+        Container(
+          color: Colors.grey,
+          width: 200,
+          height: 200,
+          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        ),
+        Container(
+          color: Colors.grey,
+          width: 200,
+          height: 200,
+          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        ),
+      ],
+    ),);
   }
 }
