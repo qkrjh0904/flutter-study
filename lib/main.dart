@@ -5,41 +5,39 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Study to Container'),
+          title: Text('위젯을 상하로 배치하기'),
         ),
-        body: CustomContainer(),
+        body: Body(),
       ),
     ),
   );
 }
 
-class CustomContainer extends StatelessWidget {
-  const CustomContainer({super.key});
+class Body extends StatelessWidget {
+  const Body({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: double.infinity,
-        height: 200,
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: Colors.blueAccent,
-          border: Border.all(
-            color: Colors.redAccent,
-            width: 8,
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      color: Colors.yellow,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            color: Colors.red,
+            child: Text('Container1'),
           ),
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black54,
-              offset: Offset(10, 10),
-              blurRadius: 10,
-            ),
-          ],
-        ),
-        child: Center(child: Text('HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello')),
+          Container(
+            color: Colors.green,
+            child: Text('Container1'),
+          ),
+          Container(
+            color: Colors.blue,
+            child: Text('Container1'),
+          ),
+        ],
       ),
     );
   }
