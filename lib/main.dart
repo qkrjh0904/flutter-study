@@ -3,31 +3,44 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      title: 'Flutter Tutorial',
       home: Scaffold(
         appBar: AppBar(
-          actions: [
-            IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () {
-                  print('home button pressed');
-                }),
-            Icon(Icons.search),
-          ],
+          title: Text('Study to Container'),
         ),
-        body: TestWidget(),
+        body: CustomContainer(),
       ),
     ),
   );
 }
 
-class TestWidget extends StatelessWidget {
-  const TestWidget({super.key});
+class CustomContainer extends StatelessWidget {
+  const CustomContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: SafeArea(
-            child: Text('이거슨 센터 임니카?', style: TextStyle(fontSize: 30))));
+      child: Container(
+        width: double.infinity,
+        height: 200,
+        padding: EdgeInsets.all(16),
+        margin: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.blueAccent,
+          border: Border.all(
+            color: Colors.redAccent,
+            width: 8,
+          ),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54,
+              offset: Offset(10, 10),
+              blurRadius: 10,
+            ),
+          ],
+        ),
+        child: Center(child: Text('HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello')),
+      ),
+    );
   }
 }
