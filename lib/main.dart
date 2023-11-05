@@ -5,7 +5,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('위젯을 상하로 배치하기'),
+          title: Text('위젯을 좌우로 배치하기'),
         ),
         body: Body(),
       ),
@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       color: Colors.yellow,
-      child: Column(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
